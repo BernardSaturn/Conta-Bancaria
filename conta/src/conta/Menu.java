@@ -2,7 +2,6 @@ package conta;
 
 import java.util.Scanner;
 
-import conta.model.Conta;
 import conta.model.ContaCorrente;
 import conta.model.ContaPoupanca;
 import conta.util.Cores;
@@ -15,13 +14,7 @@ public class Menu {
 
 		int opcao;
 
-		Conta c1 = new Conta(3, 123, 1, "Mariana", 500000.0f);
-		c1.visualizar();
-		c1.sacar(12000.0f);
-		c1.visualizar();
-		c1.depositar(5000.0f);
-		c1.visualizar();
-
+		// Teste da Classe Conta Corrente
 		ContaCorrente cc1 = new ContaCorrente(1, 123, 1, "José da Silva", 0.0f, 1000.0f);
 		cc1.visualizar();
 		cc1.sacar(12000.0f);
@@ -29,6 +22,7 @@ public class Menu {
 		cc1.depositar(5000.0f);
 		cc1.visualizar();
 
+		// Teste da Classe Conta Poupança
 		ContaPoupanca cp1 = new ContaPoupanca(2, 123, 2, "Maria dos Santos", 100000.0f, 15);
 		cp1.visualizar();
 		cp1.sacar(1000.0f);
@@ -62,7 +56,6 @@ public class Menu {
 
 			if (opcao == 9) {
 				System.out.println("\nBanco do Brazil com Z - O seu futuro começa aqui!");
-				sobre();
 				leia.close();
 				System.exit(0);
 			}
@@ -70,48 +63,40 @@ public class Menu {
 			switch (opcao) {
 			case 1:
 				System.out.println("\n Criar Conta");
-
+				// Implementação do caso 1 (criação de conta)
 				break;
 			case 2:
 				System.out.println("\n Listar todas as Contas");
-
+				// Implementação do caso 2 (listagem de contas)
 				break;
 			case 3:
 				System.out.println("\n Buscar Conta por número");
-
+				// Implementação do caso 3 (busca de conta por número)
 				break;
 			case 4:
 				System.out.println("\n Atualizar dados da Conta");
-
+				// Implementação do caso 4 (atualização de dados da conta)
 				break;
 			case 5:
 				System.out.println("\n Apagar Conta");
-
+				// Implementação do caso 5 (apagar conta)
 				break;
 			case 6:
 				System.out.println("\n Sacar");
-
+				// Implementação do caso 6 (saque)
 				break;
 			case 7:
 				System.out.println("\n Depositar");
-
+				// Implementação do caso 7 (depósito)
 				break;
 			case 8:
 				System.out.println("\n Transferir");
-
+				// Implementação do caso 8 (transferência entre contas)
 				break;
 			default:
 				System.out.println("\nOpção Inválida");
 				break;
 			}
 		}
-	}
-
-	public static void sobre() {
-		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: ");
-		System.out.println("Generation Brasil - generation@generation.org");
-		System.out.println("github.com/conteudoGeneration");
-		System.out.println("*********************************************************");
 	}
 }
